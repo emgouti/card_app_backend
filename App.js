@@ -1,3 +1,4 @@
+// const dotenv = require('dotenv').config()
 const Express = require("express");
 const Mongoose = require("mongoose");
 const BodyParser = require("body-parser");
@@ -5,9 +6,11 @@ var cors = require('cors');
 
 var app = Express();
 
+// const mongo = process.env.MONGO_URL
 
-Mongoose.connect("mongodb://localhost/emma");
+// Mongoose.connect(mongo, { useNewUrlParser: true });
 
+Mongoose.connect('mongodb+srv://emma:5241@cluster0-h0ncp.mongodb.net/test?retryWrites=true')
 const TileModel = Mongoose.model("tile", {
     location: String,
     cards: Number,
@@ -67,6 +70,6 @@ app.delete("/tile/:id", async (request, response) => {
     }
 });
 
-app.listen(3000, () => {
-    console.log("Listening at :3000...");
+app.listen(8080, () => {
+    console.log('Express listenting')
 });
