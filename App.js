@@ -6,7 +6,7 @@ var cors = require('cors');
 var app = Express();
 
 
-Mongoose.connect("mongodb://localhost/megamarket");
+Mongoose.connect("mongodb://localhost/emma");
 
 const TileModel = Mongoose.model("tile", {
     location: String,
