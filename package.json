@@ -12,7 +12,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon App.js"
+    "start": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
